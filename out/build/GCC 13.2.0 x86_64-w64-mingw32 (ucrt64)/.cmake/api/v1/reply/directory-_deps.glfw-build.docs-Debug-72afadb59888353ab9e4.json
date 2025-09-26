@@ -1,0 +1,43 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "share/doc/GLFW",
+			"paths" : 
+			[
+				"out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/docs/html"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/glfw-build/docs",
+		"source" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs"
+	}
+}

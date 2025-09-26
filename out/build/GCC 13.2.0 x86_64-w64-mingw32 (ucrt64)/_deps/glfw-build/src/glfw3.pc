@@ -1,0 +1,13 @@
+prefix=C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)
+exec_prefix=${prefix}
+includedir=C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/include
+libdir=C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/lib
+
+Name: GLFW
+Description: A multi-platform library for OpenGL, window and input
+Version: 3.5.0
+URL: https://www.glfw.org/
+Requires.private: 
+Libs: -L${libdir} -lglfw3
+Libs.private: -lgdi32
+Cflags: -I${includedir}

@@ -1,0 +1,160 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 53,
+				"parent" : 0
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "GLFW3"
+	},
+	"id" : "docs::@d837dc821c41f90a88f1",
+	"name" : "docs",
+	"paths" : 
+	{
+		"build" : "_deps/glfw-build/docs",
+		"source" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				16
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				15
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/main.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/news.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/quick.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/moving.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/compile.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/build.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/intro.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/context.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/monitor.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/window.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/input.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/vulkan.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/compat.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/docs/internal.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/docs/CMakeFiles/docs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/docs/CMakeFiles/docs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/docs/Doxyfile",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "UTILITY"
+}

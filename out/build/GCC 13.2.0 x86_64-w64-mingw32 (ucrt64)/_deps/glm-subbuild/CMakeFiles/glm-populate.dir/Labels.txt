@@ -1,0 +1,14 @@
+# Target labels
+ glm-populate
+# Source files and their labels
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/CMakeFiles/glm-populate
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/CMakeFiles/glm-populate.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/CMakeFiles/glm-populate-complete.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-build.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-configure.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-download.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-install.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-mkdir.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-patch.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-test.rule
+C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-update.rule
