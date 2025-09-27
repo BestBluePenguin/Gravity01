@@ -1,19 +1,17 @@
 var searchData=
 [
-  ['damage_20and_20refresh_0',['Window damage and refresh',['../window_guide.html#window_refresh',1,'']]],
-  ['decorations_1',['Wayland libdecor decorations',['../news.html#wayland_libdecor_decorations',1,'']]],
-  ['default_20values_2',['default values',['../intro_guide.html#init_hints_values',1,'Supported and default values'],['../window_guide.html#window_hints_values',1,'Supported and default values']]],
-  ['demand_3',['Joystick support is initialized on demand',['../news.html#joystick_init_caveat',1,'']]],
-  ['dependencies_4',['Installing dependencies',['../compile_guide.html#compile_deps',1,'']]],
-  ['dependencies_20for_20wayland_20and_20x11_5',['Dependencies for Wayland and X11',['../compile_guide.html#compile_deps_wayland',1,'']]],
-  ['dependency_20has_20been_20removed_6',['macOS CoreVideo dependency has been removed',['../news.html#corevideo_caveat',1,'']]],
-  ['deprecated_7',['deprecated',['../news.html#mingw_deprecated',1,'Original MinGW support is deprecated'],['../news.html#yosemite_deprecated',1,'OS X Yosemite support is deprecated'],['../news.html#winxp_deprecated',1,'Windows XP and Vista support is deprecated']]],
-  ['deprecated_20list_8',['Deprecated List',['../deprecated.html',1,'']]],
-  ['deprecations_9',['Deprecations',['../news.html#deprecations',1,'']]],
-  ['destruction_10',['destruction',['../input_guide.html#cursor_destruction',1,'Cursor destruction'],['../window_guide.html#window_destruction',1,'Window destruction']]],
-  ['disabled_20when_20built_20as_20a_20subproject_11',['Tests and examples are disabled when built as a subproject',['../news.html#standalone_caveat',1,'']]],
-  ['documentation_20generation_20requires_20doxygen_201_209_208_20or_20later_12',['Documentation generation requires Doxygen 1.9.8 or later',['../news.html#docs_target_caveat',1,'']]],
-  ['doxygen_201_209_208_20or_20later_13',['Documentation generation requires Doxygen 1.9.8 or later',['../news.html#docs_target_caveat',1,'']]],
-  ['drop_20input_14',['Path drop input',['../input_guide.html#path_drop',1,'']]],
-  ['dwm_20transparency_15',['Windows 7 framebuffer transparency requires DWM transparency',['../news.html#win7_framebuffer_caveat',1,'']]]
+  ['h_20header_0',['The glext.h header',['../context_guide.html#context_glext_header',1,'']]],
+  ['handle_20parameters_1',['Window handle parameters',['../moving_guide.html#moving_window_handles',1,'']]],
+  ['handling_2',['Error handling',['../intro_guide.html#error_handling',1,'']]],
+  ['hard_20and_20soft_20constraints_3',['Hard and soft constraints',['../window_guide.html#window_hints_hard',1,'']]],
+  ['has_20been_20removed_4',['has been removed',['../news.html#original_mingw',1,'Original MinGW support has been removed'],['../news.html#winxp_vista',1,'Windows XP and Vista support has been removed']]],
+  ['hat_20states_5',['Joystick hat states',['../input_guide.html#joystick_hat',1,'']]],
+  ['header_6',['header',['../quick_guide.html#quick_include',1,'Including the GLFW header'],['../context_guide.html#context_glext_header',1,'The glext.h header']]],
+  ['header_20file_7',['header file',['../build_guide.html#build_include',1,'Including the GLFW header file'],['../vulkan_guide.html#vulkan_include',1,'Including the Vulkan header file'],['../moving_guide.html#moving_renamed_files',1,'Renamed library and header file']]],
+  ['header_20inclusion_8',['GLU header inclusion',['../moving_guide.html#moving_glu',1,'']]],
+  ['header_20option_20macros_9',['GLFW header option macros',['../build_guide.html#build_macros',1,'']]],
+  ['heap_20memory_20allocator_10',['Custom heap memory allocator',['../intro_guide.html#init_allocator',1,'']]],
+  ['hints_11',['hints',['../context_guide.html#context_hints',1,'Context creation hints'],['../window_guide.html#window_hints_ctx',1,'Context related hints'],['../window_guide.html#window_hints_fb',1,'Framebuffer related hints'],['../intro_guide.html#init_hints',1,'Initialization hints'],['../window_guide.html#window_hints_osx',1,'macOS specific hints'],['../intro_guide.html#init_hints_osx',1,'macOS specific init hints'],['../window_guide.html#window_hints_mtr',1,'Monitor related hints'],['../moving_guide.html#moving_hints',1,'Persistent window hints'],['../intro_guide.html#init_hints_shared',1,'Shared init hints'],['../intro_guide.html#init_hints_wayland',1,'Wayland specific init hints'],['../window_guide.html#window_hints_wayland',1,'Wayland specific window hints'],['../window_guide.html#window_hints_win32',1,'Win32 specific hints'],['../window_guide.html#window_hints',1,'Window creation hints'],['../window_guide.html#window_hints_wnd',1,'Window related hints'],['../intro_guide.html#init_hints_x11',1,'X11 specific init hints'],['../window_guide.html#window_hints_x11',1,'X11 specific window hints']]],
+  ['hotkeys_12',['Capture of system-wide hotkeys',['../moving_guide.html#moving_syskeys',1,'']]],
+  ['human_20readable_20name_13',['Human-readable name',['../monitor_guide.html#monitor_name',1,'']]]
 ];

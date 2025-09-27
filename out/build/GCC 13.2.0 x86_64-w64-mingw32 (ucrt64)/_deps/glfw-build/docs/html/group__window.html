@@ -1129,7 +1129,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This is the function pointer type for window position callbacks. A window position callback function has the following signature: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> callback_name(<a class="code hl_typedef" href="#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos)</div>
-<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1403</div></div>
+<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1404</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window that was moved. </td></tr>
@@ -1536,17 +1536,17 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The handle of the created window, or <span class="tt">NULL</span> if an <a class="el" href="intro_guide.html#error_handling">error</a> occurred.</dd></dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a>, <a class="el" href="group__errors.html#ga76f6bb9c4eea73db675f096b404593ce">GLFW_INVALID_ENUM</a>, <a class="el" href="group__errors.html#gaaf2ef9aa8202c2b82ac2d921e554c687">GLFW_INVALID_VALUE</a>, <a class="el" href="group__errors.html#ga56882b290db23261cc6c053c40c2d08e">GLFW_API_UNAVAILABLE</a>, <a class="el" href="group__errors.html#gad16c5565b4a69f9c2a9ac2c0dbc89462">GLFW_VERSION_UNAVAILABLE</a>, <a class="el" href="group__errors.html#ga196e125ef261d94184e2b55c05762f14">GLFW_FORMAT_UNAVAILABLE</a>, <a class="el" href="group__errors.html#gacff24d2757da752ae4c80bf452356487">GLFW_NO_WINDOW_CONTEXT</a> and <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a>.</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Windows:</b> Window creation will fail if the Microsoft GDI software OpenGL implementation is the only one available.</dd>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Win32:</b> Window creation will fail if the Microsoft GDI software OpenGL implementation is the only one available.</dd>
 <dd>
-<b>Windows:</b> If the executable has an icon resource named <span class="tt">GLFW_ICON,</span> it will be set as the initial icon for the window. If no such icon is present, the <span class="tt">IDI_APPLICATION</span> icon will be used instead. To set a different icon, see <a class="el" href="#gadd7ccd39fe7a7d1f0904666ae5932dc5">glfwSetWindowIcon</a>.</dd>
+<b>Win32:</b> If the executable has an icon resource named <span class="tt">GLFW_ICON,</span> it will be set as the initial icon for the window. If no such icon is present, the <span class="tt">IDI_APPLICATION</span> icon will be used instead. To set a different icon, see <a class="el" href="#gadd7ccd39fe7a7d1f0904666ae5932dc5">glfwSetWindowIcon</a>.</dd>
 <dd>
-<b>Windows:</b> The context to share resources with must not be current on any other thread.</dd>
+<b>Win32:</b> The context to share resources with must not be current on any other thread.</dd>
 <dd>
 <b>macOS:</b> The OS only supports core profile contexts for OpenGL versions 3.2 and later. Before creating an OpenGL context of version 3.2 or later you must set the <a class="el" href="window_guide.html#GLFW_OPENGL_PROFILE_hint">GLFW_OPENGL_PROFILE</a> hint accordingly. OpenGL 3.0 and 3.1 contexts are not supported at all on macOS.</dd>
 <dd>
 <b>macOS:</b> The GLFW window has no icon, as it is not a document window, but the dock icon will be the same as the application bundle's icon. For more information on bundles, see the <a href="https://developer.apple.com/library/mac/documentation/CoreFoundation/Conceptual/CFBundles/">Bundle Programming Guide</a> in the Mac Developer Library.</dd>
 <dd>
-<b>macOS:</b> On OS X 10.10 and later the window frame will not be rendered at full resolution on Retina displays unless the <a class="el" href="window_guide.html#GLFW_SCALE_FRAMEBUFFER_hint">GLFW_SCALE_FRAMEBUFFER</a> hint is <span class="tt">GLFW_TRUE</span> and the <span class="tt">NSHighResolutionCapable</span> key is enabled in the application bundle's <span class="tt">Info.plist</span>. For more information, see <a href="https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Explained/Explained.html">High Resolution Guidelines for OS X</a> in the Mac Developer Library. The GLFW test and example programs use a custom <span class="tt">Info.plist</span> template for this, which can be found as <span class="tt">CMake/Info.plist.in</span> in the source tree.</dd>
+<b>macOS:</b> The window frame will not be rendered at full resolution on Retina displays unless the <a class="el" href="window_guide.html#GLFW_SCALE_FRAMEBUFFER_hint">GLFW_SCALE_FRAMEBUFFER</a> hint is <span class="tt">GLFW_TRUE</span> and the <span class="tt">NSHighResolutionCapable</span> key is enabled in the application bundle's <span class="tt">Info.plist</span>. For more information, see <a href="https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Explained/Explained.html">High Resolution Guidelines for OS X</a> in the Mac Developer Library. The GLFW test and example programs use a custom <span class="tt">Info.plist</span> template for this, which can be found as <span class="tt">CMake/Info.plist.in</span> in the source tree.</dd>
 <dd>
 <b>macOS:</b> When activating frame autosaving with <a class="el" href="window_guide.html#GLFW_COCOA_FRAME_NAME_hint">GLFW_COCOA_FRAME_NAME</a>, the specified window size and position may be overridden by previously saved values.</dd>
 <dd>
@@ -1808,7 +1808,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a>, <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a> and <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a> (see remarks).</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> There is no way for an application to retrieve the global position of its windows. This function will emit <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a>.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> Window positions are not currently part of any common Wayland protocol, so this function cannot be implemented and will emit <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a>.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_pos">Window position</a> </dd>
 <dd>
@@ -1852,7 +1852,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a>, <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a> and <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a> (see remarks).</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> There is no way for an application to set the global position of its windows. This function will emit <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a>.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> Window positions are not currently part of any common Wayland protocol, so this function cannot be implemented and will emit <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a>.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_pos">Window position</a> </dd>
 <dd>
@@ -2288,7 +2288,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a> and <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a>.</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> Once a window is iconified, <a class="el" href="#ga52527a5904b47d802b6b4bb519cdebc7">glfwRestoreWindow</a> won’t be able to restore it. This is a design decision of the xdg-shell protocol.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_iconify">Window iconification</a> </dd>
 <dd>
@@ -2322,6 +2321,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a> and <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a>.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> Restoring a window from maximization is not currently part of any common Wayland protocol, so this function can only restore windows from maximization.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_iconify">Window iconification</a> </dd>
 <dd>
@@ -2586,7 +2586,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a> and <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a>.</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>The OpenGL or OpenGL ES context will not be destroyed or otherwise affected by any resizing or mode switching, although you may need to update your viewport if the framebuffer size has changed.</dd>
 <dd>
-<b>Wayland:</b> The desired window position is ignored, as there is no way for an application to set this property.</dd></dl>
+<b>Wayland:</b> Window positions are not currently part of any common Wayland protocol. The window position arguments are ignored.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_monitor">Window monitor</a> </dd>
 <dd>
@@ -2631,7 +2631,7 @@ Functions</h2></td></tr>
 <dd>
 Zero is a valid value for many window and context related attributes so you cannot use a return value of zero as an indication of errors. However, this function should not fail as long as it is passed valid arguments and the library has been <a class="el" href="intro_guide.html#intro_init">initialized</a>.</dd>
 <dd>
-<b>Wayland:</b> The Wayland protocol provides no way to check whether a window is iconfied, so <a class="el" href="#ga39d44b7c056e55e581355a92d240b58a">GLFW_ICONIFIED</a> always returns <span class="tt">GLFW_FALSE</span>.</dd></dl>
+<b>Wayland:</b> Checking whether a window is iconified is not currently part of any common Wayland protocol, so the <a class="el" href="#ga39d44b7c056e55e581355a92d240b58a">GLFW_ICONIFIED</a> attribute cannot be implemented and is always <span class="tt">GLFW_FALSE</span>.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_attribs">Window attributes</a> </dd>
 <dd>
@@ -2783,7 +2783,7 @@ Zero is a valid value for many window and context related attributes so you cann
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> function_name(<a class="code hl_typedef" href="#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos)</div>
 </div><!-- fragment --><p> For more information about the callback parameters, see the <a class="el" href="#gabe287973a21a8f927cde4db06b8dcbe9">function pointer type</a>.</p>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a>.</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> This callback will never be called, as there is no way for an application to know its global position.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> This callback will not be called. The Wayland protocol provides no way to be notified of when a window is moved.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_pos">Window position</a></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>Added in version 3.0. </dd></dl>
@@ -2974,6 +2974,7 @@ Zero is a valid value for many window and context related attributes so you cann
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> function_name(<a class="code hl_typedef" href="#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> iconified)</div>
 </div><!-- fragment --><p> For more information about the callback parameters, see the <a class="el" href="#ga35c658cccba236f26e7adee0e25f6a4f">function pointer type</a>.</p>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a>.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Wayland:</b> This callback will not be called. The Wayland protocol provides no way to be notified of when a window is iconified, and no way to check whether a window is currently iconified.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="window_guide.html#window_iconify">Window iconification</a></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>Added in version 3.0. </dd></dl>
@@ -3254,7 +3255,7 @@ Zero is a valid value for many window and context related attributes so you cann
 </div><!-- contents -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

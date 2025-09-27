@@ -5,8 +5,8 @@
 cmake_minimum_required(VERSION 4.1.1)
 
 # CTest Start Step
-set(CTEST_SOURCE_DIRECTORY "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D")
-set(CTEST_BINARY_DIRECTORY "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)")
+set(CTEST_SOURCE_DIRECTORY "C:/Users/georg/Documents/CodeProjects/Gravity3D")
+set(CTEST_BINARY_DIRECTORY "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)")
 
 # CTest Update Step
 set(CTEST_UPDATE_COMMAND "C:/Program Files/Git/cmd/git.exe")

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/main.cpp" "CMakeFiles/Gravity3D.dir/main.cpp.obj" "gcc" "CMakeFiles/Gravity3D.dir/main.cpp.obj.d"
+  "C:/Users/georg/Documents/CodeProjects/Gravity3D/main.cpp" "CMakeFiles/Gravity3D.dir/main.cpp.obj" "gcc" "CMakeFiles/Gravity3D.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

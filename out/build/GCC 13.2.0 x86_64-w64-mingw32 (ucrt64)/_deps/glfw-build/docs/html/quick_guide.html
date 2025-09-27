@@ -117,7 +117,7 @@ $(function() {
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_one_drive_2_e_c_g_r_012105_2_gravity_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2quick"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_documents_2_code_projects_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2quick"></a></p>
 <p>This guide takes you through writing a small application using GLFW 3. The application will create a window and OpenGL context, render a rotating triangle and exit when the user closes the window or presses <em>Escape</em>. This guide will introduce a few of the most commonly used functions, but there are many more.</p>
 <p>This guide assumes no experience with earlier versions of GLFW. If you have used GLFW 2 in the past, read <a class="el" href="moving_guide.html">Moving from GLFW 2 to 3</a>, as some functions behave differently in GLFW 3.</p>
 <h1 class="doxsection"><a class="anchor" id="quick_steps"></a>
@@ -169,7 +169,7 @@ Creating a window and context</h2>
 <div class="line">    <span class="comment">// Window or OpenGL context creation failed</span></div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__window_html_ga3555a418df92ad53f917597fe2f64aeb"><div class="ttname"><a href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a></div><div class="ttdeci">GLFWwindow * glfwCreateWindow(int width, int height, const char *title, GLFWmonitor *monitor, GLFWwindow *share)</div><div class="ttdoc">Creates a window and its associated context.</div></div>
-<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1403</div></div>
+<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1404</div></div>
 </div><!-- fragment --><p>This creates a 640 by 480 windowed mode window with an OpenGL context. If window or OpenGL context creation fails, <span class="tt">NULL</span> will be returned. You should always check the return value. While window creation rarely fails, context creation depends on properly installed drivers and may fail even on machines with the necessary hardware.</p>
 <p>By default, the OpenGL context GLFW creates may have any version. You can require a minimum OpenGL version by setting the <span class="tt">GLFW_CONTEXT_VERSION_MAJOR</span> and <span class="tt">GLFW_CONTEXT_VERSION_MINOR</span> hints <em>before</em> creation. If the required minimum version is not supported on the machine, context (and window) creation fails.</p>
 <p>You can select the OpenGL profile by setting the <span class="tt">GLFW_OPENGL_PROFILE</span> hint. This program uses the core profile as that is the only profile macOS supports for OpenGL 3.x and 4.x.</p>
@@ -429,7 +429,7 @@ Putting it together</h1>
 </div><!-- PageDoc -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

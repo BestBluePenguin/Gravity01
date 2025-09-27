@@ -97,7 +97,7 @@ $(function() {
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_one_drive_2_e_c_g_r_012105_2_gravity_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2compat"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_documents_2_code_projects_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2compat"></a></p>
 <p>This guide describes the various API extensions used by this version of GLFW. It lists what are essentially implementation details, but which are nonetheless vital knowledge for developers intending to deploy their applications on a wide range of machines.</p>
 <p>The information in this guide is not a part of GLFW API, but merely preconditions for some parts of the library to function on a given machine. Any part of this information may change in future versions of GLFW and that will not be considered a breaking API change.</p>
 <h1 class="doxsection"><a class="anchor" id="compat_x11"></a>
@@ -108,7 +108,7 @@ X11 extensions, protocols and IPC standards</h1>
 <p>GLFW uses the EWMH <span class="tt">_NET_WM_PING</span> protocol, allowing the window manager notify the user when the application has stopped responding, i.e. when it has ceased to process events. If the running window manager does not support this protocol, the user will not be notified if the application locks up.</p>
 <p>GLFW uses the EWMH <span class="tt">_NET_WM_STATE_FULLSCREEN</span> window state to tell the window manager to make the GLFW window full screen. If the running window manager does not support this state, full screen windows may not work properly. GLFW has a fallback code path in case this state is unavailable, but every window manager behaves slightly differently in this regard.</p>
 <p>GLFW uses the EWMH <span class="tt">_NET_WM_BYPASS_COMPOSITOR</span> window property to tell a compositing window manager to un-redirect full screen GLFW windows. If the running window manager uses compositing but does not support this property then additional copying may be performed for each buffer swap of full screen windows.</p>
-<p>GLFW uses the <a href="https://www.freedesktop.org/wiki/ClipboardManager/">clipboard manager protocol</a> to push a clipboard string (i.e. selection) owned by a GLFW window about to be destroyed to the clipboard manager. If there is no running clipboard manager, the clipboard string will be unavailable once the window has been destroyed.</p>
+<p>GLFW uses the <a href="https://www.freedesktop.org/wiki/ClipboardManager/">clipboard manager protocol</a> to keep the clipboard string availble for the user after the libary has been terminated. If there is no running clipboard manager and the clipboard contents has been set with <a class="el" href="group__input.html#gaba1f022c5eb07dfac421df34cdcd31dd">glfwSetClipboardString</a>, the clipboard will be emptied when the library is terminated.</p>
 <p>GLFW uses the <a href="https://www.freedesktop.org/wiki/Specifications/XDND/">X drag-and-drop protocol</a> to provide file drop events. If the application originating the drag does not support this protocol, drag and drop will not work.</p>
 <p>GLFW uses the XRandR 1.3 extension to provide multi-monitor support. If the running X server does not support this version of this extension, multi-monitor support will not function and only a single, desktop-spanning monitor will be reported.</p>
 <p>GLFW uses the XRandR 1.3 and Xf86vidmode extensions to provide gamma ramp support. If the running X server does not support either or both of these extensions, gamma ramp support will not function.</p>
@@ -149,9 +149,11 @@ WGL extensions</h1>
 <p>GLFW uses the <span class="tt">WGL_ARB_framebuffer_sRGB</span> and <span class="tt">WGL_EXT_framebuffer_sRGB</span> extensions to provide support for sRGB framebuffers. When both of these extensions are unavailable, the <span class="tt">GLFW_SRGB_CAPABLE</span> hint will have no effect.</p>
 <h1 class="doxsection"><a class="anchor" id="compat_osx"></a>
 OpenGL on macOS</h1>
-<p>Support for OpenGL 3.2 and above was introduced with OS X 10.7 and even then only forward-compatible, core profile contexts are supported. Support for OpenGL 4.1 was introduced with OS X 10.9, also limited to forward-compatible, core profile contexts. There is also still no mechanism for requesting debug contexts or no-error contexts. Versions of Mac OS X earlier than 10.7 support at most OpenGL version 2.1.</p>
-<p>Because of this, on OS X 10.7 and later, the <span class="tt">GLFW_CONTEXT_VERSION_MAJOR</span> and <span class="tt">GLFW_CONTEXT_VERSION_MINOR</span> hints will cause <a class="el" href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a> to fail if given version 3.0 or 3.1. The <span class="tt">GLFW_OPENGL_PROFILE</span> hint must be set to <span class="tt">GLFW_OPENGL_CORE_PROFILE</span> when creating OpenGL 3.2 and later contexts. The <span class="tt">GLFW_CONTEXT_DEBUG</span> and <span class="tt">GLFW_CONTEXT_NO_ERROR</span> hints are ignored.</p>
-<p>Also, on Mac OS X 10.6 and below, the <span class="tt">GLFW_CONTEXT_VERSION_MAJOR</span> and <span class="tt">GLFW_CONTEXT_VERSION_MINOR</span> hints will fail if given a version above 2.1, setting the <span class="tt">GLFW_OPENGL_PROFILE</span> or <span class="tt">GLFW_OPENGL_FORWARD_COMPAT</span> hints to a non-default value will cause <a class="el" href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a> to fail and the <span class="tt">GLFW_CONTEXT_DEBUG</span> hint is ignored.</p>
+<p>macOS (as of version 14) still provides OpenGL but it has been deprecated by Apple. While the API is still available, it is poorly maintained and frequently develops new issues. On modern systems, OpenGL is implemented on top of Metal and is not fully thread-safe.</p>
+<p>macOS does not support OpenGL stereo rendering. If the <span class="tt">GLFW_STEREO</span> hint is set to true, OpenGL context creation will always fail.</p>
+<p>macOS only supports OpenGL core profile contexts that are forward-compatible, but the <span class="tt">GLFW_OPENGL_FORWARD_COMPAT</span> hint is ignored since GLFW 3.4. Even if this hint is set to false (the default), a forward-compatible context will be returned if available.</p>
+<p>macOS does not support OpenGL debug contexts, no-error contexts or robustness. The <span class="tt">GLFW_CONTEXT_DEBUG</span>, <span class="tt">GLFW_CONTEXT_NO_ERROR</span> and <span class="tt">GLFW_CONTEXT_ROBUSTNESS</span> hints will be ignored and a context without these features will be returned.</p>
+<p>macOS does not flush OpenGL contexts when they are made non-current. The <span class="tt">GLFW_CONTEXT_RELEASE_BEHAVIOR</span> hint is ignored and the release behavior will always be the equivalent of <span class="tt">GLFW_RELEASE_BEHAVIOR_NONE</span>. If you need a context to be flushed, call <span class="tt">glFlush</span> before making it non-current.</p>
 <h1 class="doxsection"><a class="anchor" id="compat_vulkan"></a>
 Vulkan loader and API</h1>
 <p>By default, GLFW uses the standard system-wide Vulkan loader to access the Vulkan API on all platforms except macOS. This is installed by both graphics drivers and Vulkan SDKs. If either the loader or at least one minimally functional ICD is missing, <a class="el" href="group__vulkan.html#ga2e7f30931e02464b5bc8d0d4b6f9fe2b">glfwVulkanSupported</a> will return <span class="tt">GLFW_FALSE</span> and all other Vulkan-related functions will fail with an <a class="el" href="group__errors.html#ga56882b290db23261cc6c053c40c2d08e">GLFW_API_UNAVAILABLE</a> error.</p>
@@ -166,7 +168,7 @@ Vulkan WSI extensions</h1>
 </div><!-- PageDoc -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

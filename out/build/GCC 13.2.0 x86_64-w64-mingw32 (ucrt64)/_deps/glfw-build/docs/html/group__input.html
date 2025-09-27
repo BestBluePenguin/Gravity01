@@ -301,7 +301,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This is the function pointer type for mouse button callback functions. A mouse button callback function has the following signature: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> function_name(<a class="code hl_typedef" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> button, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
-<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1403</div></div>
+<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1404</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window that received the event. </td></tr>
@@ -611,7 +611,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function sets an input mode option for the specified window. The mode must be one of <a class="el" href="input_guide.html#GLFW_CURSOR">GLFW_CURSOR</a>, <a class="el" href="input_guide.html#GLFW_STICKY_KEYS">GLFW_STICKY_KEYS</a>, <a class="el" href="input_guide.html#GLFW_STICKY_MOUSE_BUTTONS">GLFW_STICKY_MOUSE_BUTTONS</a>, <a class="el" href="input_guide.html#GLFW_LOCK_KEY_MODS">GLFW_LOCK_KEY_MODS</a> or <a class="el" href="input_guide.html#GLFW_RAW_MOUSE_MOTION">GLFW_RAW_MOUSE_MOTION</a>.</p>
+<p>This function sets an input mode option for the specified window. The mode must be one of <a class="el" href="input_guide.html#GLFW_CURSOR">GLFW_CURSOR</a>, <a class="el" href="input_guide.html#GLFW_STICKY_KEYS">GLFW_STICKY_KEYS</a>, <a class="el" href="input_guide.html#GLFW_STICKY_MOUSE_BUTTONS">GLFW_STICKY_MOUSE_BUTTONS</a>, <a class="el" href="input_guide.html#GLFW_LOCK_KEY_MODS">GLFW_LOCK_KEY_MODS</a> <a class="el" href="input_guide.html#GLFW_RAW_MOUSE_MOTION">GLFW_RAW_MOUSE_MOTION</a>, or <a class="el" href="input_guide.html#GLFW_UNLIMITED_MOUSE_BUTTONS">GLFW_UNLIMITED_MOUSE_BUTTONS</a>.</p>
 <p>If the mode is <span class="tt">GLFW_CURSOR</span>, the value must be one of the following cursor modes:</p><ul>
 <li><span class="tt">GLFW_CURSOR_NORMAL</span> makes the cursor visible and behaving normally.</li>
 <li><span class="tt">GLFW_CURSOR_HIDDEN</span> makes the cursor invisible when it is over the content area of the window but does not restrict the cursor from leaving.</li>
@@ -622,6 +622,7 @@ Functions</h2></td></tr>
 <p>If the mode is <span class="tt">GLFW_STICKY_MOUSE_BUTTONS</span>, the value must be either <span class="tt">GLFW_TRUE</span> to enable sticky mouse buttons, or <span class="tt">GLFW_FALSE</span> to disable it. If sticky mouse buttons are enabled, a mouse button press will ensure that <a class="el" href="#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a> returns <span class="tt">GLFW_PRESS</span> the next time it is called even if the mouse button had been released before the call. This is useful when you are only interested in whether mouse buttons have been pressed but not when or in which order.</p>
 <p>If the mode is <span class="tt">GLFW_LOCK_KEY_MODS</span>, the value must be either <span class="tt">GLFW_TRUE</span> to enable lock key modifier bits, or <span class="tt">GLFW_FALSE</span> to disable them. If enabled, callbacks that receive modifier bits will also have the <a class="el" href="group__mods.html#gaefeef8fcf825a6e43e241b337897200f">GLFW_MOD_CAPS_LOCK</a> bit set when the event was generated with Caps Lock on, and the <a class="el" href="group__mods.html#ga64e020b8a42af8376e944baf61feecbe">GLFW_MOD_NUM_LOCK</a> bit when Num Lock was on.</p>
 <p>If the mode is <span class="tt">GLFW_RAW_MOUSE_MOTION</span>, the value must be either <span class="tt">GLFW_TRUE</span> to enable raw (unscaled and unaccelerated) mouse motion when the cursor is disabled, or <span class="tt">GLFW_FALSE</span> to disable it. If raw motion is not supported, attempting to set this will emit <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a>. Call <a class="el" href="#gae4ee0dbd0d256183e1ea4026d897e1c2">glfwRawMouseMotionSupported</a> to check for support.</p>
+<p>If the mode is <span class="tt">GLFW_UNLIMITED_MOUSE_BUTTONS</span>, the value must be either <span class="tt">GLFW_TRUE</span> to disable the mouse button limit when calling the mouse button callback, or <span class="tt">GLFW_FALSE</span> to limit the mouse buttons sent to the callback to the mouse button token values up to <span class="tt">GLFW_MOUSE_BUTTON_LAST</span>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window whose input mode to set. </td></tr>
@@ -814,10 +815,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>This function returns the last state reported for the specified mouse button to the specified window. The returned state is one of <span class="tt">GLFW_PRESS</span> or <span class="tt">GLFW_RELEASE</span>.</p>
 <p>If the <a class="el" href="input_guide.html#GLFW_STICKY_MOUSE_BUTTONS">GLFW_STICKY_MOUSE_BUTTONS</a> input mode is enabled, this function returns <span class="tt">GLFW_PRESS</span> the first time you call it for a mouse button that was pressed, even if that mouse button has already been released.</p>
+<p>The <a class="el" href="input_guide.html#GLFW_UNLIMITED_MOUSE_BUTTONS">GLFW_UNLIMITED_MOUSE_BUTTONS</a> input mode does not effect the limit on buttons which can be polled with this function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The desired window. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">button</td><td>The desired <a class="el" href="group__buttons.html">mouse button</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">button</td><td>The desired <a class="el" href="group__buttons.html">mouse button token</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1227,7 +1229,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This function sets the mouse button callback of the specified window, which is called when a mouse button is pressed or released.</p>
-<p>When a window loses input focus, it will generate synthetic mouse button release events for all pressed mouse buttons. You can tell these events from user-generated events by the fact that the synthetic ones are generated after the focus loss event has been processed, i.e. after the <a class="el" href="group__window.html#gac2d83c4a10f071baf841f6730528e66c">window focus callback</a> has been called.</p>
+<p>When a window loses input focus, it will generate synthetic mouse button release events for all pressed mouse buttons with associated button tokens. You can tell these events from user-generated events by the fact that the synthetic ones are generated after the focus loss event has been processed, i.e. after the <a class="el" href="group__window.html#gac2d83c4a10f071baf841f6730528e66c">window focus callback</a> has been called.</p>
+<p>The reported <span class="tt">button</span> value can be higher than <span class="tt">GLFW_MOUSE_BUTTON_LAST</span> if the button does not have an associated <a class="el" href="group__buttons.html">button token</a> and the <a class="el" href="input_guide.html#GLFW_UNLIMITED_MOUSE_BUTTONS">GLFW_UNLIMITED_MOUSE_BUTTONS</a> input mode is set.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window whose callback to set. </td></tr>
@@ -1895,7 +1898,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a> and <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a>.</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Windows:</b> The clipboard on Windows has a single global lock for reading and writing. GLFW tries to acquire it a few times, which is almost always enough. If it cannot acquire the lock then this function emits <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a> and returns. It is safe to try this multiple times.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Win32:</b> The clipboard on Windows has a single global lock for reading and writing. GLFW tries to acquire it a few times, which is almost always enough. If it cannot acquire the lock then this function emits <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a> and returns. It is safe to try this multiple times.</dd></dl>
 <dl class="section user"><dt>Pointer lifetime</dt><dd>The specified string is copied before this function returns.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="input_guide.html#clipboard">Clipboard input and output</a> </dd>
@@ -1928,7 +1931,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The contents of the clipboard as a UTF-8 encoded string, or <span class="tt">NULL</span> if an <a class="el" href="intro_guide.html#error_handling">error</a> occurred.</dd></dl>
 <dl class="section user"><dt>Errors</dt><dd>Possible errors include <a class="el" href="group__errors.html#ga2374ee02c177f12e1fa76ff3ed15e14a">GLFW_NOT_INITIALIZED</a>, <a class="el" href="group__errors.html#ga196e125ef261d94184e2b55c05762f14">GLFW_FORMAT_UNAVAILABLE</a> and <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a>.</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd><b>Windows:</b> The clipboard on Windows has a single global lock for reading and writing. GLFW tries to acquire it a few times, which is almost always enough. If it cannot acquire the lock then this function emits <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a> and returns. It is safe to try this multiple times.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd><b>Win32:</b> The clipboard on Windows has a single global lock for reading and writing. GLFW tries to acquire it a few times, which is almost always enough. If it cannot acquire the lock then this function emits <a class="el" href="group__errors.html#gad44162d78100ea5e87cdd38426b8c7a1">GLFW_PLATFORM_ERROR</a> and returns. It is safe to try this multiple times.</dd></dl>
 <dl class="section user"><dt>Pointer lifetime</dt><dd>The returned string is allocated and freed by GLFW. You should not free it yourself. It is valid until the next call to <a class="el" href="#ga71a5b20808ea92193d65c21b82580355">glfwGetClipboardString</a> or <a class="el" href="#gaba1f022c5eb07dfac421df34cdcd31dd">glfwSetClipboardString</a>, or until the library is terminated.</dd></dl>
 <dl class="section user"><dt>Thread safety</dt><dd>This function must only be called from the main thread.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="input_guide.html#clipboard">Clipboard input and output</a> </dd>
@@ -2046,7 +2049,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

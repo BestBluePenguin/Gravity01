@@ -164,7 +164,7 @@ $(function() {
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_one_drive_2_e_c_g_r_012105_2_gravity_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2moving"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_documents_2_code_projects_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2moving"></a></p>
 <p>This is a transition guide for moving from GLFW 2 to 3. It describes what has changed or been removed, but does <em>not</em> include <a class="el" href="news.html">new features</a> unless they are required when moving an existing code base onto the new API. For example, the new multi-monitor functions are required to create full screen windows with GLFW 3.</p>
 <h1 class="doxsection"><a class="anchor" id="moving_removed"></a>
 Changed and removed features</h1>
@@ -259,7 +259,7 @@ Window closing changes</h2>
 </div><!-- fragment --><p>The close callback no longer returns a value. Instead, it is called after the close flag has been set, so it can optionally override its value, before event processing completes. You may however not call <a class="el" href="group__window.html#gacdf43e51376051d2c091662e9fe3d7b2">glfwDestroyWindow</a> from the close callback (or any other window related callback).</p>
 <p><b>Old syntax</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> GLFWCALL window_close_callback(<span class="keywordtype">void</span>);</div>
 </div><!-- fragment --><p><b>New syntax</b> </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> window_close_callback(<a class="code hl_typedef" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window);</div>
-<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1403</div></div>
+<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1404</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>GLFW never clears the close flag to <span class="tt">GLFW_FALSE</span>, meaning you can use it for other reasons to close the window as well, for example the user choosing Quit from an in-game menu.</dd></dl>
 <h2 class="doxsection"><a class="anchor" id="moving_hints"></a>
 Persistent window hints</h2>
@@ -414,7 +414,7 @@ Renamed tokens</h2>
 </div><!-- PageDoc -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

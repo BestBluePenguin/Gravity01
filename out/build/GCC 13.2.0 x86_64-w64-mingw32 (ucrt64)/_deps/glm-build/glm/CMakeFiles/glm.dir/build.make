@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D"
+CMAKE_SOURCE_DIR = C:\Users\georg\Documents\CodeProjects\Gravity3D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
+CMAKE_BINARY_DIR = "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
 
 # Include any dependencies generated for this target.
 include _deps/glm-build/glm/CMakeFiles/glm.dir/depend.make
@@ -75,16 +75,16 @@ _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-build/glm/C
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-build/glm/CMakeFiles/glm.dir/includes_CXX.rsp
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-src/glm/detail/glm.cpp
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-build/glm/CMakeFiles/glm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj -MF CMakeFiles\glm.dir\detail\glm.cpp.obj.d -o CMakeFiles\glm.dir\detail\glm.cpp.obj -c "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm\detail\glm.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj -MF CMakeFiles\glm.dir\detail\glm.cpp.obj.d -o CMakeFiles\glm.dir\detail\glm.cpp.obj -c "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm\detail\glm.cpp"
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/glm.dir/detail/glm.cpp.i"
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm\detail\glm.cpp" > CMakeFiles\glm.dir\detail\glm.cpp.i
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm\detail\glm.cpp" > CMakeFiles\glm.dir\detail\glm.cpp.i
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/glm.dir/detail/glm.cpp.s"
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm\detail\glm.cpp" -o CMakeFiles\glm.dir\detail\glm.cpp.s
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm\detail\glm.cpp" -o CMakeFiles\glm.dir\detail\glm.cpp.s
 
 # Object files for target glm
 glm_OBJECTS = \
@@ -96,19 +96,19 @@ glm_EXTERNAL_OBJECTS =
 _deps/glm-build/glm/libglm.a: _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj
 _deps/glm-build/glm/libglm.a: _deps/glm-build/glm/CMakeFiles/glm.dir/build.make
 _deps/glm-build/glm/libglm.a: _deps/glm-build/glm/CMakeFiles/glm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libglm.a"
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean_target.cmake
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\glm.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libglm.a"
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean_target.cmake
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\glm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/glm-build/glm/CMakeFiles/glm.dir/build: _deps/glm-build/glm/libglm.a
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/build
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/clean:
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean.cmake
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLM-BU~1\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean.cmake
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/clean
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-build\glm" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-build\glm\CMakeFiles\glm.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\georg\Documents\CodeProjects\Gravity3D "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-src\glm" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-build\glm" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glm-build\glm\CMakeFiles\glm.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/depend
 

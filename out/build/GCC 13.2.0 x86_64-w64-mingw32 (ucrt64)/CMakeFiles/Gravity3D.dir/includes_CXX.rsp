@@ -1,1 +1,1 @@
--I"C:/Users/georg/OneDrive/ECGR21~1/Gravity/GRAVIT~1/out/build/GCC132~1.0X8/_deps/glfw-src/include" -I"C:/Users/georg/OneDrive/ECGR21~1/Gravity/GRAVIT~1/out/build/GCC132~1.0X8/_deps/glm-src"
+-I"C:/Users/georg/DOCUME~1/CODEPR~1/GRAVIT~1/out/build/GCC132~1.0X8/_deps/glfw-src/include" -I"C:/Users/georg/DOCUME~1/CODEPR~1/GRAVIT~1/out/build/GCC132~1.0X8/_deps/glm-src" -isystem "C:/Windows/System32/vcpkg/installed/x64-windows/include"

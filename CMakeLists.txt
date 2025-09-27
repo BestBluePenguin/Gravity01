@@ -26,10 +26,10 @@ add_executable(Gravity3D main.cpp)
 target_include_directories(Gravity3D PRIVATE ${GLEW_INCLUDE_DIRS})
 
 target_link_libraries(Gravity3D PRIVATE 
+    GLEW::glew
     OpenGL::GL
     glfw
     glm::glm
-    GLEW::glew
     )
 
 

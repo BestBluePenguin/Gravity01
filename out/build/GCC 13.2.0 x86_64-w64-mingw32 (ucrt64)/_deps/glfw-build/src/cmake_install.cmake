@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/src
+# Install script for directory: C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-src/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,12 +38,12 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/src/libglfw3.a")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/src/install_local_manifest.txt"
+  file(WRITE "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-build/src/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D"
+CMAKE_SOURCE_DIR = C:\Users\georg\Documents\CodeProjects\Gravity3D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
+CMAKE_BINARY_DIR = "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
 
 # Utility rule file for docs.
 
@@ -89,8 +89,8 @@ _deps/glfw-build/docs/html/index.html: _deps/glfw-src/docs/header.html
 _deps/glfw-build/docs/html/index.html: _deps/glfw-src/docs/footer.html
 _deps/glfw-build/docs/html/index.html: _deps/glfw-src/docs/extra.css
 _deps/glfw-build/docs/html/index.html: _deps/glfw-src/docs/spaces.svg
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating HTML documentation"
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLFW-B~1\docs && "C:\Program Files\doxygen\bin\doxygen.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating HTML documentation"
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLFW-B~1\docs && "C:\Program Files\doxygen\bin\doxygen.exe"
 
 _deps/glfw-build/docs/CMakeFiles/docs.dir/codegen:
 .PHONY : _deps/glfw-build/docs/CMakeFiles/docs.dir/codegen
@@ -105,10 +105,10 @@ _deps/glfw-build/docs/CMakeFiles/docs.dir/build: docs
 .PHONY : _deps/glfw-build/docs/CMakeFiles/docs.dir/build
 
 _deps/glfw-build/docs/CMakeFiles/docs.dir/clean:
-	cd /d C:\Users\georg\OneDrive\ECGR21~1\Gravity\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLFW-B~1\docs && $(CMAKE_COMMAND) -P CMakeFiles\docs.dir\cmake_clean.cmake
+	cd /d C:\Users\georg\DOCUME~1\CODEPR~1\GRAVIT~1\out\build\GCC132~1.0X8\_deps\GLFW-B~1\docs && $(CMAKE_COMMAND) -P CMakeFiles\docs.dir\cmake_clean.cmake
 .PHONY : _deps/glfw-build/docs/CMakeFiles/docs.dir/clean
 
 _deps/glfw-build/docs/CMakeFiles/docs.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glfw-src\docs" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glfw-build\docs" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glfw-build\docs\CMakeFiles\docs.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\georg\Documents\CodeProjects\Gravity3D "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glfw-src\docs" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glfw-build\docs" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\_deps\glfw-build\docs\CMakeFiles\docs.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : _deps/glfw-build/docs/CMakeFiles/docs.dir/depend
 

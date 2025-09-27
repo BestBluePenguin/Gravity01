@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-src/glm
+# Install script for directory: C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-src/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/install/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-build/glm/install_local_manifest.txt"
+  file(WRITE "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glm-build/glm/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

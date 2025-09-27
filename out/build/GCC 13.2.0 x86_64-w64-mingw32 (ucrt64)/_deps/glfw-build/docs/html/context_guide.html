@@ -121,7 +121,7 @@ $(function() {
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_one_drive_2_e_c_g_r_012105_2_gravity_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2context"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_documents_2_code_projects_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2context"></a></p>
 <p>This guide introduces the OpenGL and OpenGL ES context related functions of GLFW. For details on a specific function in this category, see the <a class="el" href="group__context.html">Context reference</a>. There are also guides for the other areas of the GLFW API.</p>
 <ul>
 <li><a class="el" href="intro_guide.html">Introduction to the API</a></li>
@@ -144,7 +144,7 @@ Context object sharing</h2>
 <p>When creating a window and its OpenGL or OpenGL ES context with <a class="el" href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a>, you can specify another window whose context the new one should share its objects (textures, vertex and element buffers, etc.) with.</p>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* second_window = <a class="code hl_function" href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a>(640, 480, <span class="stringliteral">&quot;Second Window&quot;</span>, NULL, first_window);</div>
 <div class="ttc" id="agroup__window_html_ga3555a418df92ad53f917597fe2f64aeb"><div class="ttname"><a href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a></div><div class="ttdeci">GLFWwindow * glfwCreateWindow(int width, int height, const char *title, GLFWmonitor *monitor, GLFWwindow *share)</div><div class="ttdoc">Creates a window and its associated context.</div></div>
-<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1403</div></div>
+<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1404</div></div>
 </div><!-- fragment --><p>Object sharing is implemented by the operating system and graphics driver. On platforms where it is possible to choose which types of objects are shared, GLFW requests that all types are shared.</p>
 <p>See the relevant chapter of the <a href="https://www.opengl.org/registry/">OpenGL</a> or <a href="https://www.khronos.org/opengles/">OpenGL ES</a> reference documents for more information. The name and number of this chapter unfortunately varies between versions and APIs, but has at times been named <em>Shared Objects and Multiple Contexts</em>.</p>
 <p>GLFW comes with a bare-bones object sharing example program called <span class="tt">sharing</span>.</p>
@@ -283,7 +283,7 @@ Fetching function pointers</h3>
 </div><!-- PageDoc -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

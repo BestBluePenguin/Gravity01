@@ -60,9 +60,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-windres.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake"
+  "C:/Program Files/CMake/share/cmake-4.1/Modules/SelectLibraryConfigurations.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/WriteBasicConfigVersionFile.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Templates/CTestScript.cmake.in"
-  "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/CMakeLists.txt"
+  "C:/Users/georg/Documents/CodeProjects/Gravity3D/CMakeLists.txt"
   "CMakeFiles/4.1.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeRCCompiler.cmake"
@@ -76,6 +77,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/glfw-src/src/CMakeLists.txt"
   "_deps/glm-src/CMakeLists.txt"
   "_deps/glm-src/glm/CMakeLists.txt"
+  "C:/Windows/System32/vcpkg/installed/x64-windows/share/glew/CopyImportedTargetProperties.cmake"
+  "C:/Windows/System32/vcpkg/installed/x64-windows/share/glew/glew-config.cmake"
+  "C:/Windows/System32/vcpkg/installed/x64-windows/share/glew/glew-targets-debug.cmake"
+  "C:/Windows/System32/vcpkg/installed/x64-windows/share/glew/glew-targets-release.cmake"
+  "C:/Windows/System32/vcpkg/installed/x64-windows/share/glew/glew-targets.cmake"
+  "C:/Windows/System32/vcpkg/installed/x64-windows/share/glew/vcpkg-cmake-wrapper.cmake"
+  "C:/Windows/System32/vcpkg/scripts/buildsystems/vcpkg.cmake"
   )
 
 # The corresponding makefile is:

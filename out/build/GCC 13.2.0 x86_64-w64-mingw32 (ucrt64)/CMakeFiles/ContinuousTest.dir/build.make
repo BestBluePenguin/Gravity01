@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D"
+CMAKE_SOURCE_DIR = C:\Users\georg\Documents\CodeProjects\Gravity3D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
+CMAKE_BINARY_DIR = "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
 
 # Utility rule file for ContinuousTest.
 
@@ -84,6 +84,6 @@ CMakeFiles/ContinuousTest.dir/clean:
 .PHONY : CMakeFiles/ContinuousTest.dir/clean
 
 CMakeFiles/ContinuousTest.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles\ContinuousTest.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\georg\Documents\CodeProjects\Gravity3D C:\Users\georg\Documents\CodeProjects\Gravity3D "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles\ContinuousTest.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousTest.dir/depend
 

@@ -206,7 +206,7 @@ $(function() {
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_one_drive_2_e_c_g_r_012105_2_gravity_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2window"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_documents_2_code_projects_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2window"></a></p>
 <p>This guide introduces the window related functions of GLFW. For details on a specific function in this category, see the <a class="el" href="group__window.html">Window reference</a>. There are also guides for the other areas of GLFW.</p>
 <ul>
 <li><a class="el" href="intro_guide.html">Introduction to the API</a></li>
@@ -224,7 +224,7 @@ Window creation</h2>
 <p>A window and its OpenGL or OpenGL ES context are created with <a class="el" href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a>, which returns a handle to the created window object. For example, this creates a 640 by 480 windowed mode window:</p>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window = <a class="code hl_function" href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a>(640, 480, <span class="stringliteral">&quot;My Title&quot;</span>, NULL, NULL);</div>
 <div class="ttc" id="agroup__window_html_ga3555a418df92ad53f917597fe2f64aeb"><div class="ttname"><a href="group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a></div><div class="ttdeci">GLFWwindow * glfwCreateWindow(int width, int height, const char *title, GLFWmonitor *monitor, GLFWwindow *share)</div><div class="ttdoc">Creates a window and its associated context.</div></div>
-<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1403</div></div>
+<div class="ttc" id="agroup__window_html_ga3c96d80d363e67d13a41b5d1821f3242"><div class="ttname"><a href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a></div><div class="ttdeci">struct GLFWwindow GLFWwindow</div><div class="ttdoc">Opaque window object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1404</div></div>
 </div><!-- fragment --><p>If window creation fails, <span class="tt">NULL</span> will be returned, so it is necessary to check the return value.</p>
 <p>The window handle is passed to all window related functions and is provided to along with all input events, so event handlers can tell which window received the event.</p>
 <h3 class="doxsection"><a class="anchor" id="window_full_screen"></a>
@@ -271,13 +271,13 @@ Full screen windows</h3>
 <div class="ttc" id="agroup__window_html_gab292ea403db6d514537b515311bf9ae3"><div class="ttname"><a href="group__window.html#gab292ea403db6d514537b515311bf9ae3">GLFW_BLUE_BITS</a></div><div class="ttdeci">#define GLFW_BLUE_BITS</div><div class="ttdoc">Framebuffer bit depth hint.</div><div class="ttdef"><b>Definition</b> glfw3.h:958</div></div>
 <div class="ttc" id="agroup__window_html_gaf78ed8e417dbcc1e354906cc2708c982"><div class="ttname"><a href="group__window.html#gaf78ed8e417dbcc1e354906cc2708c982">GLFW_RED_BITS</a></div><div class="ttdeci">#define GLFW_RED_BITS</div><div class="ttdoc">Framebuffer bit depth hint.</div><div class="ttdef"><b>Definition</b> glfw3.h:948</div></div>
 <div class="ttc" id="agroup__window_html_gafba3b72638c914e5fb8a237dd4c50d4d"><div class="ttname"><a href="group__window.html#gafba3b72638c914e5fb8a237dd4c50d4d">GLFW_GREEN_BITS</a></div><div class="ttdeci">#define GLFW_GREEN_BITS</div><div class="ttdoc">Framebuffer bit depth hint.</div><div class="ttdef"><b>Definition</b> glfw3.h:953</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html"><div class="ttname"><a href="struct_g_l_f_wvidmode.html">GLFWvidmode</a></div><div class="ttdoc">Video mode type.</div><div class="ttdef"><b>Definition</b> glfw3.h:2027</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html_a292fdd281f3485fb3ff102a5bda43faa"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a292fdd281f3485fb3ff102a5bda43faa">GLFWvidmode::greenBits</a></div><div class="ttdeci">int greenBits</div><div class="ttdef"><b>Definition</b> glfw3.h:2039</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html_a6066c4ecd251098700062d3b735dba1b"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a6066c4ecd251098700062d3b735dba1b">GLFWvidmode::redBits</a></div><div class="ttdeci">int redBits</div><div class="ttdef"><b>Definition</b> glfw3.h:2036</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html_a698dcb200562051a7249cb6ae154c71d"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a698dcb200562051a7249cb6ae154c71d">GLFWvidmode::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> glfw3.h:2030</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html_a791bdd6c7697b09f7e9c97054bf05649"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a791bdd6c7697b09f7e9c97054bf05649">GLFWvidmode::refreshRate</a></div><div class="ttdeci">int refreshRate</div><div class="ttdef"><b>Definition</b> glfw3.h:2045</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html_ac65942a5f6981695517437a9d571d03c"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#ac65942a5f6981695517437a9d571d03c">GLFWvidmode::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> glfw3.h:2033</div></div>
-<div class="ttc" id="astruct_g_l_f_wvidmode_html_af310977f58d2e3b188175b6e3d314047"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#af310977f58d2e3b188175b6e3d314047">GLFWvidmode::blueBits</a></div><div class="ttdeci">int blueBits</div><div class="ttdef"><b>Definition</b> glfw3.h:2042</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html"><div class="ttname"><a href="struct_g_l_f_wvidmode.html">GLFWvidmode</a></div><div class="ttdoc">Video mode type.</div><div class="ttdef"><b>Definition</b> glfw3.h:2028</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html_a292fdd281f3485fb3ff102a5bda43faa"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a292fdd281f3485fb3ff102a5bda43faa">GLFWvidmode::greenBits</a></div><div class="ttdeci">int greenBits</div><div class="ttdef"><b>Definition</b> glfw3.h:2040</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html_a6066c4ecd251098700062d3b735dba1b"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a6066c4ecd251098700062d3b735dba1b">GLFWvidmode::redBits</a></div><div class="ttdeci">int redBits</div><div class="ttdef"><b>Definition</b> glfw3.h:2037</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html_a698dcb200562051a7249cb6ae154c71d"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a698dcb200562051a7249cb6ae154c71d">GLFWvidmode::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> glfw3.h:2031</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html_a791bdd6c7697b09f7e9c97054bf05649"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#a791bdd6c7697b09f7e9c97054bf05649">GLFWvidmode::refreshRate</a></div><div class="ttdeci">int refreshRate</div><div class="ttdef"><b>Definition</b> glfw3.h:2046</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html_ac65942a5f6981695517437a9d571d03c"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#ac65942a5f6981695517437a9d571d03c">GLFWvidmode::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> glfw3.h:2034</div></div>
+<div class="ttc" id="astruct_g_l_f_wvidmode_html_af310977f58d2e3b188175b6e3d314047"><div class="ttname"><a href="struct_g_l_f_wvidmode.html#af310977f58d2e3b188175b6e3d314047">GLFWvidmode::blueBits</a></div><div class="ttdeci">int blueBits</div><div class="ttdef"><b>Definition</b> glfw3.h:2043</div></div>
 </div><!-- fragment --><p>This also works for windowed mode windows that are made full screen.</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="struct_g_l_f_wvidmode.html">GLFWvidmode</a>* mode = <a class="code hl_function" href="group__monitor.html#gaba376fa7e76634b4788bddc505d6c9d5">glfwGetVideoMode</a>(monitor);</div>
 <div class="line"> </div>
@@ -593,7 +593,7 @@ Window size limits</h2>
 <div class="ttc" id="agroup__window_html_gac314fa6cec7d2d307be9963e2709cc90"><div class="ttname"><a href="group__window.html#gac314fa6cec7d2d307be9963e2709cc90">glfwSetWindowSizeLimits</a></div><div class="ttdeci">void glfwSetWindowSizeLimits(GLFWwindow *window, int minwidth, int minheight, int maxwidth, int maxheight)</div><div class="ttdoc">Sets the size limits of the specified window.</div></div>
 </div><!-- fragment --><p>To specify only a minimum size or only a maximum one, set the other pair to <span class="tt">GLFW_DONT_CARE</span>.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="group__window.html#gac314fa6cec7d2d307be9963e2709cc90">glfwSetWindowSizeLimits</a>(window, 640, 480, <a class="code hl_define" href="glfw3_8h.html#a7a2edf2c18446833d27d07f1b7f3d571">GLFW_DONT_CARE</a>, <a class="code hl_define" href="glfw3_8h.html#a7a2edf2c18446833d27d07f1b7f3d571">GLFW_DONT_CARE</a>);</div>
-<div class="ttc" id="aglfw3_8h_html_a7a2edf2c18446833d27d07f1b7f3d571"><div class="ttname"><a href="glfw3_8h.html#a7a2edf2c18446833d27d07f1b7f3d571">GLFW_DONT_CARE</a></div><div class="ttdeci">#define GLFW_DONT_CARE</div><div class="ttdef"><b>Definition</b> glfw3.h:1346</div></div>
+<div class="ttc" id="aglfw3_8h_html_a7a2edf2c18446833d27d07f1b7f3d571"><div class="ttname"><a href="glfw3_8h.html#a7a2edf2c18446833d27d07f1b7f3d571">GLFW_DONT_CARE</a></div><div class="ttdeci">#define GLFW_DONT_CARE</div><div class="ttdef"><b>Definition</b> glfw3.h:1347</div></div>
 </div><!-- fragment --><p>To disable size limits for a window, set them all to <span class="tt">GLFW_DONT_CARE</span>.</p>
 <p>The aspect ratio of the content area of a windowed mode window can be enforced with <a class="el" href="group__window.html#ga72ac8cb1ee2e312a878b55153d81b937">glfwSetWindowAspectRatio</a>. The user may resize the window freely unless size limits are also set, but the size will be constrained to maintain the aspect ratio.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="group__window.html#ga72ac8cb1ee2e312a878b55153d81b937">glfwSetWindowAspectRatio</a>(window, 16, 9);</div>
@@ -626,7 +626,8 @@ Window position</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> xpos, ypos;</div>
 <div class="line"><a class="code hl_function" href="group__window.html#ga73cb526c000876fd8ddf571570fdb634">glfwGetWindowPos</a>(window, &amp;xpos, &amp;ypos);</div>
 <div class="ttc" id="agroup__window_html_ga73cb526c000876fd8ddf571570fdb634"><div class="ttname"><a href="group__window.html#ga73cb526c000876fd8ddf571570fdb634">glfwGetWindowPos</a></div><div class="ttdeci">void glfwGetWindowPos(GLFWwindow *window, int *xpos, int *ypos)</div><div class="ttdoc">Retrieves the position of the content area of the specified window.</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="window_title"></a>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd><b>Wayland:</b> An applications cannot know the positions of its windows or whether one has been moved. The <a class="el" href="#GLFW_POSITION_X">GLFW_POSITION_X</a> and <a class="el" href="#GLFW_POSITION_Y">GLFW_POSITION_Y</a> window hints are ignored. The <a class="el" href="group__window.html#ga73cb526c000876fd8ddf571570fdb634">glfwGetWindowPos</a> and <a class="el" href="group__window.html#ga1abb6d690e8c88e0c8cd1751356dbca8">glfwSetWindowPos</a> functions emit <a class="el" href="group__errors.html#ga526fba20a01504a8086c763b6ca53ce5">GLFW_FEATURE_UNAVAILABLE</a>. The window position callback will not be called.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="window_title"></a>
 Window title</h2>
 <p>All GLFW windows have a title, although undecorated or full screen windows may not display it or only display it in a task bar or similar interface. You can set a new UTF-8 encoded window title with <a class="el" href="group__window.html#ga5d877f09e968cef7a360b513306f17ff">glfwSetWindowTitle</a>.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="group__window.html#ga5d877f09e968cef7a360b513306f17ff">glfwSetWindowTitle</a>(window, <span class="stringliteral">&quot;My Window&quot;</span>);</div>
@@ -648,7 +649,7 @@ Window icon</h2>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="group__window.html#gadd7ccd39fe7a7d1f0904666ae5932dc5">glfwSetWindowIcon</a>(window, 2, images);</div>
 <div class="ttc" id="agroup__window_html_gadd7ccd39fe7a7d1f0904666ae5932dc5"><div class="ttname"><a href="group__window.html#gadd7ccd39fe7a7d1f0904666ae5932dc5">glfwSetWindowIcon</a></div><div class="ttdeci">void glfwSetWindowIcon(GLFWwindow *window, int count, const GLFWimage *images)</div><div class="ttdoc">Sets the icon for the specified window.</div></div>
-<div class="ttc" id="astruct_g_l_f_wimage_html"><div class="ttname"><a href="struct_g_l_f_wimage.html">GLFWimage</a></div><div class="ttdoc">Image data.</div><div class="ttdef"><b>Definition</b> glfw3.h:2090</div></div>
+<div class="ttc" id="astruct_g_l_f_wimage_html"><div class="ttname"><a href="struct_g_l_f_wimage.html">GLFWimage</a></div><div class="ttdoc">Image data.</div><div class="ttdef"><b>Definition</b> glfw3.h:2091</div></div>
 </div><!-- fragment --><p>The image data is 32-bit, little-endian, non-premultiplied RGBA, i.e. eight bits per channel with the red channel first. The pixels are arranged canonically as sequential rows, starting from the top-left corner.</p>
 <p>To revert to the default window icon, pass in an empty image array.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="group__window.html#gadd7ccd39fe7a7d1f0904666ae5932dc5">glfwSetWindowIcon</a>(window, 0, NULL);</div>
@@ -656,7 +657,7 @@ Window icon</h2>
 Window monitor</h2>
 <p>Full screen windows are associated with a specific monitor. You can get the handle for this monitor with <a class="el" href="group__window.html#ga4d766499ac02c60f02221a9dfab87299">glfwGetWindowMonitor</a>.</p>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="group__monitor.html#ga8d9efd1cde9426692c73fe40437d0ae3">GLFWmonitor</a>* monitor = <a class="code hl_function" href="group__window.html#ga4d766499ac02c60f02221a9dfab87299">glfwGetWindowMonitor</a>(window);</div>
-<div class="ttc" id="agroup__monitor_html_ga8d9efd1cde9426692c73fe40437d0ae3"><div class="ttname"><a href="group__monitor.html#ga8d9efd1cde9426692c73fe40437d0ae3">GLFWmonitor</a></div><div class="ttdeci">struct GLFWmonitor GLFWmonitor</div><div class="ttdoc">Opaque monitor object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1391</div></div>
+<div class="ttc" id="agroup__monitor_html_ga8d9efd1cde9426692c73fe40437d0ae3"><div class="ttname"><a href="group__monitor.html#ga8d9efd1cde9426692c73fe40437d0ae3">GLFWmonitor</a></div><div class="ttdeci">struct GLFWmonitor GLFWmonitor</div><div class="ttdoc">Opaque monitor object.</div><div class="ttdef"><b>Definition</b> glfw3.h:1392</div></div>
 <div class="ttc" id="agroup__window_html_ga4d766499ac02c60f02221a9dfab87299"><div class="ttname"><a href="group__window.html#ga4d766499ac02c60f02221a9dfab87299">glfwGetWindowMonitor</a></div><div class="ttdeci">GLFWmonitor * glfwGetWindowMonitor(GLFWwindow *window)</div><div class="ttdoc">Returns the monitor that the window uses for full screen mode.</div></div>
 </div><!-- fragment --><p>This monitor handle is one of those returned by <a class="el" href="group__monitor.html#ga70b1156d5d24e9928f145d6c864369d2">glfwGetMonitors</a>.</p>
 <p>For windowed mode windows, this function returns <span class="tt">NULL</span>. This is how to tell full screen windows from windowed mode windows.</p>
@@ -696,7 +697,8 @@ Window iconification</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> iconified = <a class="code hl_function" href="group__window.html#gacccb29947ea4b16860ebef42c2cb9337">glfwGetWindowAttrib</a>(window, <a class="code hl_define" href="group__window.html#ga39d44b7c056e55e581355a92d240b58a">GLFW_ICONIFIED</a>);</div>
 <div class="ttc" id="agroup__window_html_ga39d44b7c056e55e581355a92d240b58a"><div class="ttname"><a href="group__window.html#ga39d44b7c056e55e581355a92d240b58a">GLFW_ICONIFIED</a></div><div class="ttdeci">#define GLFW_ICONIFIED</div><div class="ttdoc">Window iconification window attribute.</div><div class="ttdef"><b>Definition</b> glfw3.h:864</div></div>
 <div class="ttc" id="agroup__window_html_gacccb29947ea4b16860ebef42c2cb9337"><div class="ttname"><a href="group__window.html#gacccb29947ea4b16860ebef42c2cb9337">glfwGetWindowAttrib</a></div><div class="ttdeci">int glfwGetWindowAttrib(GLFWwindow *window, int attrib)</div><div class="ttdoc">Returns an attribute of the specified window.</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="window_maximize"></a>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd><b>Wayland:</b> An application cannot know if any of its windows have been iconified or restore one from iconification. The <a class="el" href="group__window.html#ga52527a5904b47d802b6b4bb519cdebc7">glfwRestoreWindow</a> function can only restore windows from maximization and the iconify callback will not be called. The <a class="el" href="#GLFW_ICONIFIED_attrib">GLFW_ICONIFIED</a> attribute will be false. The <a class="el" href="group__window.html#ga1bb559c0ebaad63c5c05ad2a066779c4">glfwIconifyWindow</a> function works normally.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="window_maximize"></a>
 Window maximization</h2>
 <p>Windows can be maximized (i.e. zoomed) with <a class="el" href="group__window.html#ga3f541387449d911274324ae7f17ec56b">glfwMaximizeWindow</a>.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="group__window.html#ga3f541387449d911274324ae7f17ec56b">glfwMaximizeWindow</a>(window);</div>
@@ -887,7 +889,7 @@ Buffer swapping</h1>
 </div><!-- PageDoc -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>

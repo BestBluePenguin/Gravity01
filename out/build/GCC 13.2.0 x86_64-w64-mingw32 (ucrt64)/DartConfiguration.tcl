@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D
-BuildDirectory: C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)
+SourceDirectory: C:/Users/georg/Documents/CodeProjects/Gravity3D
+BuildDirectory: C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D"
+ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/georg/Documents/CodeProjects/Gravity3D"
 MakeCommand: C:/Program\ Files/CMake/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

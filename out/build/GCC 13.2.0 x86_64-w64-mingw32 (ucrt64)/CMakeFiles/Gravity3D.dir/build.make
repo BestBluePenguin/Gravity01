@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D"
+CMAKE_SOURCE_DIR = C:\Users\georg\Documents\CodeProjects\Gravity3D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
+CMAKE_BINARY_DIR = "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Gravity3D.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/Gravity3D.dir/codegen:
 
 CMakeFiles/Gravity3D.dir/main.cpp.obj: CMakeFiles/Gravity3D.dir/flags.make
 CMakeFiles/Gravity3D.dir/main.cpp.obj: CMakeFiles/Gravity3D.dir/includes_CXX.rsp
-CMakeFiles/Gravity3D.dir/main.cpp.obj: C:/Users/georg/OneDrive/ECGR\ 2105/Gravity/Gravity3D/main.cpp
+CMakeFiles/Gravity3D.dir/main.cpp.obj: C:/Users/georg/Documents/CodeProjects/Gravity3D/main.cpp
 CMakeFiles/Gravity3D.dir/main.cpp.obj: CMakeFiles/Gravity3D.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gravity3D.dir/main.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gravity3D.dir/main.cpp.obj -MF CMakeFiles\Gravity3D.dir\main.cpp.obj.d -o CMakeFiles\Gravity3D.dir\main.cpp.obj -c "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gravity3D.dir/main.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gravity3D.dir/main.cpp.obj -MF CMakeFiles\Gravity3D.dir\main.cpp.obj.d -o CMakeFiles\Gravity3D.dir\main.cpp.obj -c C:\Users\georg\Documents\CodeProjects\Gravity3D\main.cpp
 
 CMakeFiles/Gravity3D.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Gravity3D.dir/main.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\main.cpp" > CMakeFiles\Gravity3D.dir\main.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\georg\Documents\CodeProjects\Gravity3D\main.cpp > CMakeFiles\Gravity3D.dir\main.cpp.i
 
 CMakeFiles/Gravity3D.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Gravity3D.dir/main.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\main.cpp" -o CMakeFiles\Gravity3D.dir\main.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\georg\Documents\CodeProjects\Gravity3D\main.cpp -o CMakeFiles\Gravity3D.dir\main.cpp.s
 
 # Object files for target Gravity3D
 Gravity3D_OBJECTS = \
@@ -95,13 +95,15 @@ Gravity3D_EXTERNAL_OBJECTS =
 
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/main.cpp.obj
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/build.make
+Gravity3D.exe: C:/Windows/System32/vcpkg/installed/x64-windows/debug/lib/glew32d.lib
 Gravity3D.exe: _deps/glfw-build/src/libglfw3.a
 Gravity3D.exe: _deps/glm-build/glm/libglm.a
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/linkLibs.rsp
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/objects1.rsp
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Gravity3D.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Gravity3D.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Gravity3D.dir\link.txt --verbose=$(VERBOSE)
+	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Windows/System32/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/Gravity3D.exe" -installedDir C:/Windows/System32/vcpkg/installed/x64-windows/debug/bin -OutVariable out
 
 # Rule to build all files generated by this target.
 CMakeFiles/Gravity3D.dir/build: Gravity3D.exe
@@ -112,6 +114,6 @@ CMakeFiles/Gravity3D.dir/clean:
 .PHONY : CMakeFiles/Gravity3D.dir/clean
 
 CMakeFiles/Gravity3D.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\OneDrive\ECGR 2105\Gravity\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles\Gravity3D.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\georg\Documents\CodeProjects\Gravity3D C:\Users\georg\Documents\CodeProjects\Gravity3D "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)" "C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles\Gravity3D.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Gravity3D.dir/depend
 

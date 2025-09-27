@@ -1,3 +1,3 @@
-C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir
-C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/georg/OneDrive/ECGR 2105/Gravity/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-subbuild/CMakeFiles/rebuild_cache.dir
+C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir
+C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/_deps/glfw-subbuild/CMakeFiles/rebuild_cache.dir

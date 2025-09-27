@@ -38,6 +38,7 @@ var searchData=
   ['glfw_5frelease_5fbehavior_5fnone_35',['GLFW_RELEASE_BEHAVIOR_NONE',['../glfw3_8h.html#afca09088eccacdce4b59036cfae349c5',1,'glfw3.h']]],
   ['glfw_5fsticky_5fkeys_36',['GLFW_STICKY_KEYS',['../glfw3_8h.html#ae3bbe2315b7691ab088159eb6c9110fc',1,'glfw3.h']]],
   ['glfw_5fsticky_5fmouse_5fbuttons_37',['GLFW_STICKY_MOUSE_BUTTONS',['../glfw3_8h.html#a4d7ce8ce71030c3b04e2b78145bc59d1',1,'glfw3.h']]],
-  ['glfw_5fwayland_5fdisable_5flibdecor_38',['GLFW_WAYLAND_DISABLE_LIBDECOR',['../glfw3_8h.html#aadcea7c6afbf86b848404457c4253fd7',1,'glfw3.h']]],
-  ['glfw_5fwayland_5fprefer_5flibdecor_39',['GLFW_WAYLAND_PREFER_LIBDECOR',['../glfw3_8h.html#a92b0d7e0eaeeefaccc0ccc2ccb130e99',1,'glfw3.h']]]
+  ['glfw_5funlimited_5fmouse_5fbuttons_38',['GLFW_UNLIMITED_MOUSE_BUTTONS',['../glfw3_8h.html#a6a0e3ad7d9e2c3c13e481bfb32c9bb85',1,'glfw3.h']]],
+  ['glfw_5fwayland_5fdisable_5flibdecor_39',['GLFW_WAYLAND_DISABLE_LIBDECOR',['../glfw3_8h.html#aadcea7c6afbf86b848404457c4253fd7',1,'glfw3.h']]],
+  ['glfw_5fwayland_5fprefer_5flibdecor_40',['GLFW_WAYLAND_PREFER_LIBDECOR',['../glfw3_8h.html#a92b0d7e0eaeeefaccc0ccc2ccb130e99',1,'glfw3.h']]]
 ];

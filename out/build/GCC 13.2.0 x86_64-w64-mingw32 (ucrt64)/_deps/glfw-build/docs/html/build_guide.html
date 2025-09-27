@@ -110,7 +110,7 @@ $(function() {
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_one_drive_2_e_c_g_r_012105_2_gravity_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2build"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__c_1_2_users_2georg_2_documents_2_code_projects_2_gravity3_d_2out_2build_2_g_c_c_0113_82_80_01x86__64-w64-mingw32_01_07ucrt64_08_2__deps_2glfw-src_2docs_2build"></a></p>
 <p>This is about compiling and linking applications that use GLFW. For information on how to write such applications, start with the <a class="el" href="quick_guide.html">introductory tutorial</a>. For information on how to compile the GLFW library itself, see <a class="el" href="compile_guide.html">Compiling GLFW</a>.</p>
 <p>This is not a tutorial on compilation or linking. It assumes basic understanding of how to compile and link a C program as well as how to use the specific compiler of your chosen development environment. The compilation and linking process should be explained in your C programming material and in the documentation for your development environment.</p>
 <h1 class="doxsection"><a class="anchor" id="build_include"></a>
@@ -200,7 +200,7 @@ With CMake and GLFW source</h2>
 With CMake and installed GLFW binaries</h2>
 <p>This section is about using CMake to link GLFW after it has been built and installed. If you want to build it along with your application instead, see <a class="el" href="#build_link_cmake_source">With CMake and GLFW source</a>.</p>
 <p>With a few changes to your <span class="tt">CMakeLists.txt</span> you can locate the package and target files generated when GLFW is installed.</p>
-<div class="fragment"><div class="line">find_package(glfw3 3.4 REQUIRED)</div>
+<div class="fragment"><div class="line">find_package(glfw3 3.5 REQUIRED)</div>
 </div><!-- fragment --><p>Once GLFW has been added to the project, link against it with the <span class="tt">glfw</span> target. This adds the GLFW library and its link-time dependencies, the include directory for the GLFW header and, when applicable, the <a class="el" href="#GLFW_DLL">GLFW_DLL</a> macro.</p>
 <div class="fragment"><div class="line">target_link_libraries(myapp glfw)</div>
 </div><!-- fragment --><p>Note that the <span class="tt">glfw</span> target does not depend on OpenGL, as GLFW loads any OpenGL, OpenGL ES or Vulkan libraries it needs at runtime. If your application calls OpenGL directly, instead of using a modern <a class="el" href="context_guide.html#context_glext_auto">extension loader library</a>, use the OpenGL CMake package.</p>
@@ -222,12 +222,12 @@ With pkg-config and GLFW binaries on Unix</h2>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="build_link_xcode"></a>
 With Xcode on macOS</h2>
 <p>If you are using the dynamic library version of GLFW, add it to the project dependencies.</p>
-<p>If you are using the static library version of GLFW, add it and the Cocoa, OpenGL and IOKit frameworks to the project as dependencies. They can all be found in <span class="tt">/System/Library/Frameworks</span>.</p>
+<p>If you are using the static library version of GLFW, add it and the Cocoa, OpenGL, IOKit and QuartzCore frameworks to the project as dependencies. They can all be found in <span class="tt">/System/Library/Frameworks</span>.</p>
 <h2 class="doxsection"><a class="anchor" id="build_link_osx"></a>
 With command-line or makefile on macOS</h2>
 <p>It is recommended that you use <a class="el" href="#build_link_pkgconfig">pkg-config</a> when using installed GLFW binaries from the command line on macOS. That way you will get any new dependencies added automatically. If you still wish to build manually, you need to add the required frameworks and libraries to your command-line yourself using the <span class="tt">-l</span> and <span class="tt">-framework</span> switches.</p>
 <p>If you are using the dynamic GLFW library, which is named <span class="tt">libglfw.3.dylib</span>, do:</p>
-<div class="fragment"><div class="line">cc -o myprog myprog.c -lglfw -framework Cocoa -framework OpenGL -framework IOKit</div>
+<div class="fragment"><div class="line">cc -o myprog myprog.c -lglfw -framework Cocoa -framework OpenGL -framework IOKit -framework QuartzCore</div>
 </div><!-- fragment --><p>If you are using the static library, named <span class="tt">libglfw3.a</span>, substitute <span class="tt">-lglfw3</span> for <span class="tt">-lglfw</span>.</p>
 <p>Note that you do not add the <span class="tt">.framework</span> extension to a framework when linking against it from the command-line.</p>
 <dl class="section note"><dt>Note</dt><dd>Your machine may have <span class="tt">libGL.*.dylib</span> style OpenGL library, but that is for the X Window System and will not work with the macOS native version of GLFW. </dd></dl>
@@ -235,7 +235,7 @@ With command-line or makefile on macOS</h2>
 </div><!-- PageDoc -->
 <address class="footer">
 <p>
-Last update on Thu Sep 25 2025 for GLFW 3.4.0
+Last update on Fri Sep 26 2025 for GLFW 3.5.0
 </p>
 </address>
 </body>
