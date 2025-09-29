@@ -3,15 +3,16 @@
 #include <sstream>
 #include <fstream>
 
+#include "physics.h"
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-
-constexpr float phi = 1.61803398875f; //Golden Ratio
-constexpr int tickRate = 30; //updates per second
+/// @brief Tick rate per second
+constexpr int tickRate = 20;
 
 //Screen Dim
 constexpr unsigned int WIDTH = 800;
@@ -22,7 +23,7 @@ glm::vec3 cameraPos = glm::vec3(0.0f,0.0f,1.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f,0.0f,-1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f,1.0f,0.0f);
 
-float radius = 5.0f;
+float radius = 30.0f;
 float theta = 0.0f;
 float phiA = glm::radians(45.0f);
 float cameraSpeed = 0.001f;
@@ -107,7 +108,6 @@ GLuint createShaderProgram(const char* vertexSource, const char* fragmentSource)
     return shaderProgram;
 }
 
-
 /// @brief Creation of a GLFW Window
 /// @return GLFW Window
 GLFWwindow* startGLFW()
@@ -144,147 +144,8 @@ GLFWwindow* startGLFW()
     return window;
 };
 
-/// @brief Creates Vertex Array Object, Vertex Buffer Object, Element Buffer Object
-/// @param VAO Vertex Array Object
-/// @param VBO Vertex Buffer Object
-/// @param EBO Element Buffer Object
-/// @param vertices Vertecies of the object
-/// @param vertexCount Number of vertecies
-/// @param indices Vertex indices
-/// @param indexCount Number of vertex indices
-void createVAOVBOEBO(GLuint& VAO, GLuint& VBO, GLuint& EBO, 
-    const float* vertices, size_t vertexCount, const unsigned int* indices, size_t indexCount)
-{
-    //VAO
-    glGenVertexArrays(1, &VAO);
-    glBindVertexArray(VAO);
-
-    //VBO
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(float), vertices, GL_STATIC_DRAW);
-
-    //EBO
-    glGenBuffers(1, &EBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexCount*sizeof(unsigned int), indices, GL_STATIC_DRAW);
-
-    //Vertex attribute pointers
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-
-    glBindVertexArray(0);
-
-}
-
-//TODO Move to own file
-//Physics object 
-
-/// @brief Creates a physics body. Uses Icosphere or cube spheres.
-class Body {
-    public:
-    GLuint VBO, VAO, EBO;
-    glm::vec3 pos = glm::vec3(0.0f, 0.0f, 0.0f);
-    unsigned int subdivision;
-    glm::vec4 color = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
-    float radius;
-
-    //TODO Change
-    std::vector<glm::vec3> vertecies;
-    std::vector<unsigned int> indices;
-
-    /// @brief Constructor for object
-    /// @param radius Radius of object
-    /// @param subdivision Number of subdivisions
-    Body(float radius, unsigned int subdivision)
-    {
-        this->radius = radius;
-        this->subdivision = subdivision;
-    }
-    
-    /// @brief Generates an Isosphere
-    /// @param r radius
-    /// @param subdivisons  number of subdivisions
-    void icosphere(float r, unsigned int subdivisions = 2)
-    {
-        //icosahedron vertecies
-        vertecies = {
-            //ZY Plane
-            glm::vec3(0.0f,  1.0f, phi),
-            glm::vec3(0.0f, -1.0f, phi),
-            glm::vec3(0.0f,  1.0f, -phi),
-            glm::vec3(0.0f, -1.0f, -phi),
-            //XY plnae
-            glm::vec3( 1.0f,  phi, 0.0f),
-            glm::vec3(-1.0f,  phi, 0.0f),
-            glm::vec3( 1.0f, -phi, 0.0f),
-            glm::vec3(-1.0f, -phi, 0.0f),
-            //XZ plane
-            glm::vec3( phi, 0.0f,  1.0f),
-            glm::vec3( phi, 0.0f, -1.0f),
-            glm::vec3(-phi, 0.0f,  1.0f),
-            glm::vec3(-phi, 0.0f, -1.0f),
-        };
-        //Normalize     
-        for (glm::vec3& cord : vertecies) cord = glm::normalize(cord);
-        //TODO Subdividing
-
-        //TODO Procedually generated Indices
-        indices = {
-            0, 11, 5,
-            0, 5, 1,
-            0, 1, 7,
-            0, 7, 10,
-            0, 10, 11,
-
-            1, 5, 9,
-            5, 11, 4,
-            11, 10, 2,
-            10, 7, 6,
-            7, 1, 8,
-
-            3, 9, 4,
-            3, 4, 2,
-            3, 2, 6,
-            3, 6, 8,
-            3, 8, 9,
-
-            4, 9, 5,
-            2, 4, 11,
-            6, 2, 10,
-            8, 6, 7,
-            9, 8, 1
-        };
-        //TODO Scaling
-    }
-
-    void uploadMesh()
-    {
-        //Fattening vector
-        std::vector<float> vertexData;
-        for (const glm::vec3& v : vertecies)
-        {
-            vertexData.push_back(v.x);
-            vertexData.push_back(v.y);
-            vertexData.push_back(v.z);
-        }
-        createVAOVBOEBO(VAO, VBO, EBO, vertexData.data(), vertexData.size(), indices.data(), indices.size());
-        
-    }
-
-    void render(GLuint shaderPorgram)
-    {
-        //Colorize sphere
-        GLint colorLoc = glGetUniformLocation(shaderPorgram, "objectColor");
-        glUniform4f(colorLoc, color.r, color.g, color.b, color.a);
-
-        //Draws the mesh
-        glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, 0);
-    }
-
-};
-
+/// @brief Updates the camera
+/// @param shaderProgram Shader proram
 void updateCamera(GLuint shaderProgram) {
     // Calculate new camera position in spherical coordinates
     cameraPos.x = radius * sin(phiA) * cos(theta);
@@ -297,24 +158,57 @@ void updateCamera(GLuint shaderProgram) {
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 }
 
-
-
-//TODO Cube Sphere
-
-
+/// @brief Main function
 int main(int, char**){
     //Setup
     GLFWwindow* window = startGLFW();
     GLuint shaderProgram = createShaderProgram("vertex.glsl", "fragment.glsl");
+    glUseProgram(shaderProgram);
 
-    //Generation of a single sphere
-    Body sphere1(1.0f, 0);
-    sphere1.icosphere(1.0f);
-    sphere1.uploadMesh();
+    //DEBUG
+    /*
+    glDisable(GL_CULL_FACE);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    */
 
+    //Generation of sphere
+    std::vector<Body> bodies
+    {
+        {1.0f,1.0e13f,{0.0f,3.0f,0.0f},{0.30f,0.67f,0.89f,1.0f},{0.05f,0.0f,0.0f},2}, 
+        {0.5f,1.0e5f,{5.0f,-3.0f,0.0f},{0.71f,0.73f,0.75f,1.0f},{1.56f,0.78f,4.69f},2}, 
+        {0.5f,1.0e5f,{-10.0f,0.0f,0.0f},{0.71f,0.73f,0.75f,1.0f},{-1.56f,-0.78f,-4.69f},2}
+    };
+
+    for (Body& obj: bodies) 
+    {
+        obj.icosphere();
+        obj.uploadMesh();
+    }
+
+    glEnable(GL_DEPTH_TEST);
+    int fbw, fbh;
+    glfwGetFramebufferSize(window, &fbw, &fbh);
+    glViewport(0, 0, fbw, fbh);
+
+    //Projection matrix
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)WIDTH / HEIGHT, 0.1f, 100.0f);
+    GLuint projLoc = glGetUniformLocation(shaderProgram, "projection");
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+    
+    //Decoupling physics
+    float accum = 0.0f;
+    std::chrono::time_point prev = std::chrono::high_resolution_clock::now();
+    //Render loop
     while(!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
+
+        std::chrono::time_point now = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<float> elapsed = now - prev;
+        prev = now;
+
+        accum += elapsed.count();
+
         //Camera rotation
         if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
             std::cout << "LEFT arrow key pressed!" << std::endl;
@@ -339,13 +233,30 @@ int main(int, char**){
             }
         }
 
+        //Decoupled physics
+        while ( accum >= (1.0f/tickRate))
+        {
+            applyPhysics(bodies,1.0f/tickRate);
+            for (Body& obj: bodies) obj.update(1.0f/tickRate);
+            accum -= (1.0f/tickRate);
+        }
+
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glUseProgram(shaderProgram);
+
         // Update the camera position based on the angles
         updateCamera(shaderProgram);
-        
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        glUseProgram(shaderProgram);
-        sphere1.render(shaderProgram);
+        
+        glm::vec3 lightDirection = glm::normalize(glm::vec3(-0.5f, -1.0f, -0.3f));
+        GLuint lightDirLoc = glGetUniformLocation(shaderProgram, "lightDir");
+        glUniform3fv(lightDirLoc, 1, glm::value_ptr(lightDirection));
+
+        glm::mat4 model = glm::mat4(1.0f);
+        GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+        for (Body& obj: bodies) obj.render(shaderProgram);
 
         glfwSwapBuffers(window);
     }

@@ -86,14 +86,31 @@ CMakeFiles/Gravity3D.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Gravity3D.dir/main.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\georg\Documents\CodeProjects\Gravity3D\main.cpp -o CMakeFiles\Gravity3D.dir\main.cpp.s
 
+CMakeFiles/Gravity3D.dir/physics.cpp.obj: CMakeFiles/Gravity3D.dir/flags.make
+CMakeFiles/Gravity3D.dir/physics.cpp.obj: CMakeFiles/Gravity3D.dir/includes_CXX.rsp
+CMakeFiles/Gravity3D.dir/physics.cpp.obj: C:/Users/georg/Documents/CodeProjects/Gravity3D/physics.cpp
+CMakeFiles/Gravity3D.dir/physics.cpp.obj: CMakeFiles/Gravity3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Gravity3D.dir/physics.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gravity3D.dir/physics.cpp.obj -MF CMakeFiles\Gravity3D.dir\physics.cpp.obj.d -o CMakeFiles\Gravity3D.dir\physics.cpp.obj -c C:\Users\georg\Documents\CodeProjects\Gravity3D\physics.cpp
+
+CMakeFiles/Gravity3D.dir/physics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Gravity3D.dir/physics.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\georg\Documents\CodeProjects\Gravity3D\physics.cpp > CMakeFiles\Gravity3D.dir\physics.cpp.i
+
+CMakeFiles/Gravity3D.dir/physics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Gravity3D.dir/physics.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\georg\Documents\CodeProjects\Gravity3D\physics.cpp -o CMakeFiles\Gravity3D.dir\physics.cpp.s
+
 # Object files for target Gravity3D
 Gravity3D_OBJECTS = \
-"CMakeFiles/Gravity3D.dir/main.cpp.obj"
+"CMakeFiles/Gravity3D.dir/main.cpp.obj" \
+"CMakeFiles/Gravity3D.dir/physics.cpp.obj"
 
 # External object files for target Gravity3D
 Gravity3D_EXTERNAL_OBJECTS =
 
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/main.cpp.obj
+Gravity3D.exe: CMakeFiles/Gravity3D.dir/physics.cpp.obj
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/build.make
 Gravity3D.exe: C:/Windows/System32/vcpkg/installed/x64-windows/debug/lib/glew32d.lib
 Gravity3D.exe: _deps/glfw-build/src/libglfw3.a
@@ -101,7 +118,7 @@ Gravity3D.exe: _deps/glm-build/glm/libglm.a
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/linkLibs.rsp
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/objects1.rsp
 Gravity3D.exe: CMakeFiles/Gravity3D.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Gravity3D.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\georg\Documents\CodeProjects\Gravity3D\out\build\GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Gravity3D.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Gravity3D.dir\link.txt --verbose=$(VERBOSE)
 	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Windows/System32/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/georg/Documents/CodeProjects/Gravity3D/out/build/GCC 13.2.0 x86_64-w64-mingw32 (ucrt64)/Gravity3D.exe" -installedDir C:/Windows/System32/vcpkg/installed/x64-windows/debug/bin -OutVariable out
 

@@ -636,6 +636,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gravity3D.dir\build.make CMakeFiles/Gravity3D.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+physics.obj: physics.cpp.obj
+.PHONY : physics.obj
+
+# target to build an object file
+physics.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gravity3D.dir\build.make CMakeFiles/Gravity3D.dir/physics.cpp.obj
+.PHONY : physics.cpp.obj
+
+physics.i: physics.cpp.i
+.PHONY : physics.i
+
+# target to preprocess a source file
+physics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gravity3D.dir\build.make CMakeFiles/Gravity3D.dir/physics.cpp.i
+.PHONY : physics.cpp.i
+
+physics.s: physics.cpp.s
+.PHONY : physics.s
+
+# target to generate assembly for a file
+physics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gravity3D.dir\build.make CMakeFiles/Gravity3D.dir/physics.cpp.s
+.PHONY : physics.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -686,6 +710,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... physics.obj
+	@echo ... physics.i
+	@echo ... physics.s
 .PHONY : help
 
 

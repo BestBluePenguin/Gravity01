@@ -20,7 +20,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glm)
 
-add_executable(Gravity3D main.cpp)
+add_executable(Gravity3D main.cpp physics.h physics.cpp)
 
 
 target_include_directories(Gravity3D PRIVATE ${GLEW_INCLUDE_DIRS})
