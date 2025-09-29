@@ -12,7 +12,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 /// @brief Tick rate per second
-constexpr int tickRate = 20;
+constexpr int tickRate = 30;
 
 //Screen Dim
 constexpr unsigned int WIDTH = 800;
@@ -156,6 +156,7 @@ void updateCamera(GLuint shaderProgram) {
     glm::mat4 view = glm::lookAt(cameraPos, glm::vec3(0.0f, 0.0f, 0.0f), cameraUp);
     GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    glUniform3fv(glGetUniformLocation(shaderProgram, "viewPos"), 1, glm::value_ptr(cameraPos));
 }
 
 /// @brief Main function
@@ -174,9 +175,10 @@ int main(int, char**){
     //Generation of sphere
     std::vector<Body> bodies
     {
-        {1.0f,1.0e13f,{0.0f,3.0f,0.0f},{0.30f,0.67f,0.89f,1.0f},{0.05f,0.0f,0.0f},2}, 
-        {0.5f,1.0e5f,{5.0f,-3.0f,0.0f},{0.71f,0.73f,0.75f,1.0f},{1.56f,0.78f,4.69f},2}, 
-        {0.5f,1.0e5f,{-10.0f,0.0f,0.0f},{0.71f,0.73f,0.75f,1.0f},{-1.56f,-0.78f,-4.69f},2}
+        {1.0f,1.0e13f,{0.0f,3.0f,0.0f},{0.30f,0.67f,0.89f,1.0f},{0.1f,0.0f,0.0f},2, true}, 
+        {1.0f,5.0e2f,{0.0f,-9.0f,3.0f},{0.14f,0.679f,0.44f,1.0f},{5.0f,0.0f,0.0f},2, true}, 
+        {0.5f,1.0e5f,{5.0f,-3.0f,0.0f},{0.71f,0.73f,0.75f,1.0f},{-10.0f,0.0f,0.0f},2}, 
+        {0.75f,1.0e10f,{-10.0f,0.0f,0.0f},{0.30f,0.67f,0.89f,1.0f},{-2.56f,-0.78f,-4.69f},2}
     };
 
     for (Body& obj: bodies) 
@@ -185,7 +187,6 @@ int main(int, char**){
         obj.uploadMesh();
     }
 
-    glEnable(GL_DEPTH_TEST);
     int fbw, fbh;
     glfwGetFramebufferSize(window, &fbw, &fbh);
     glViewport(0, 0, fbw, fbh);
@@ -197,13 +198,13 @@ int main(int, char**){
     
     //Decoupling physics
     float accum = 0.0f;
-    std::chrono::time_point prev = std::chrono::high_resolution_clock::now();
+    std::chrono::high_resolution_clock::time_point prev = std::chrono::high_resolution_clock::now();
     //Render loop
     while(!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
 
-        std::chrono::time_point now = std::chrono::high_resolution_clock::now();
+        std::chrono::high_resolution_clock::time_point now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<float> elapsed = now - prev;
         prev = now;
 
@@ -234,27 +235,19 @@ int main(int, char**){
         }
 
         //Decoupled physics
-        while ( accum >= (1.0f/tickRate))
+        while (accum >= (1.0f/tickRate))
         {
             applyPhysics(bodies,1.0f/tickRate);
             for (Body& obj: bodies) obj.update(1.0f/tickRate);
             accum -= (1.0f/tickRate);
         }
-
+        
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glUseProgram(shaderProgram);
-
-        // Update the camera position based on the angles
         updateCamera(shaderProgram);
 
-        
-        glm::vec3 lightDirection = glm::normalize(glm::vec3(-0.5f, -1.0f, -0.3f));
-        GLuint lightDirLoc = glGetUniformLocation(shaderProgram, "lightDir");
-        glUniform3fv(lightDirLoc, 1, glm::value_ptr(lightDirection));
-
-        glm::mat4 model = glm::mat4(1.0f);
-        GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        applyLight(shaderProgram, bodies);
+        // Update the camera position based on the angles
 
         for (Body& obj: bodies) obj.render(shaderProgram);
 

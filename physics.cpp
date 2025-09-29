@@ -1,7 +1,7 @@
 #include "physics.h"
 
 //Physics functions
-Body::Body(float radius, float mass, glm::vec3 initPos, glm::vec4 color, glm::vec3 initVel, unsigned int quality)
+Body::Body(float radius, float mass, glm::vec3 initPos, glm::vec4 color, glm::vec3 initVel, unsigned int quality, bool lightSource)
 {
     this->mass = mass;
     this->radius = radius;
@@ -9,6 +9,7 @@ Body::Body(float radius, float mass, glm::vec3 initPos, glm::vec4 color, glm::ve
     this->color = color;
     velocity = initVel;
     this->quality = quality;
+    light = lightSource;
 }
 
 void Body::icosphere()
@@ -133,6 +134,9 @@ void Body::render(GLuint shaderPorgram)
     GLint colorLoc = glGetUniformLocation(shaderPorgram, "objectColor");
     glUniform4f(colorLoc, color.r, color.g, color.b, color.a);
 
+    //Adds glow, Adjusts color
+    if (light) glUniform1i(glGetUniformLocation(shaderPorgram, "glow"), 1);
+    else glUniform1i(glGetUniformLocation(shaderPorgram, "glow"), 0);
     //Draws the mesh
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, 0);
@@ -180,6 +184,7 @@ void applyPhysics(std::vector<Body>& bodies, float dt)
         {
             glm::vec3 direction = bodies[j].position - bodies[i].position;
             float distSQ = glm::dot(direction, direction);
+            if (distSQ < 1e-6f) continue; //zero guard
             direction = glm::normalize(direction);
             float force = gravConst * ((bodies[i].mass * bodies[j].mass)/distSQ);
 
@@ -190,4 +195,63 @@ void applyPhysics(std::vector<Body>& bodies, float dt)
             bodies[j].velocity += accelJ * dt;
         }
     }
+}
+
+void applyLight(GLint shaderProgram, std::vector<Body>& bodies, int maxLights)
+{
+    glUseProgram(shaderProgram);
+    std::vector<lightSource> lights;
+    for (const Body& obj: bodies)
+    {
+        if (!obj.light) continue;
+        if ((int)lights.size() >= maxLights) break;
+
+        lightSource L{};
+        L.position  = obj.position;
+        L.ambient = glm::vec3(0.2f, 0.2f, 0.2f);
+        L.diffuse = glm::vec3(0.5f, 0.5f, 0.5f);
+        L.specular = glm::vec3(0.75f, 0.75f, 0.75f);
+        L.constant  = 1.0f;
+        L.linear    = 0.05;
+        L.quadratic = 0.005;
+        L.active    = 1;
+        lights.push_back(L);
+    }
+
+    //Fills empty indices
+    int num = (int)lights.size();
+    for (int i = num; i < maxLights; ++i) {
+        lightSource L{};
+        L.active = 0;
+        lights.push_back(L);
+    }
+
+    //Passing to shaders
+    for (int i = 0; i < maxLights; ++i)
+    {
+        std::string name = "pointLights[" + std::to_string(i) + "]." + "position";
+        glUniform3f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].position.x,lights[i].position.y,lights[i].position.z);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "ambient";
+        glUniform3f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].ambient.x,lights[i].ambient.y,lights[i].ambient.z);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "diffuse";
+        glUniform3f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].diffuse.x,lights[i].diffuse.y,lights[i].diffuse.z);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "specular";
+        glUniform3f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].specular.x,lights[i].specular.y,lights[i].specular.z);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "constant";
+        glUniform1f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].constant);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "linear";
+        glUniform1f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].linear);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "quadratic";
+        glUniform1f(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].quadratic);
+
+        name = "pointLights[" + std::to_string(i) + "]." + "source";
+        glUniform1i(glGetUniformLocation(shaderProgram,name.c_str()), lights[i].active);
+    }
+    glUniform1i(glGetUniformLocation(shaderProgram, "numPointLights"), std::min(num, maxLights));
 }

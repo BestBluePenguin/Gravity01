@@ -3,6 +3,11 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <algorithm>   // std::min
+#include <cmath>
+#include <cstdint>
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
@@ -16,6 +21,17 @@ constexpr float phi = 1.61803398875f;
 /// @brief Gravitational Constant
 constexpr float gravConst = 6.6743e-11f;
 
+struct lightSource
+{
+    glm::vec3 position;
+    glm::vec3 ambient;
+    glm::vec3 diffuse;
+    glm::vec3 specular;
+    float constant;
+    float linear;
+    float quadratic;
+    int   active;
+};
 
 struct Body
 {
@@ -23,6 +39,7 @@ struct Body
     glm::vec3 velocity;
     float mass;
 
+    bool light;
     GLuint VBO, VAO, EBO;
     glm::vec4 color;
     float radius;
@@ -42,7 +59,7 @@ struct Body
         glm::vec3 initPos = glm::vec3(0.0f, 0.0f, 0.0f), 
         glm::vec4 color = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f),
         glm::vec3 initVel = glm::vec3(0.0f, 0.0f, 0.0f), 
-        unsigned int quality = 0);
+        unsigned int quality = 0, bool lightSource = false);
 
     /// @brief Generates an icosphere
     void icosphere();
@@ -78,6 +95,12 @@ void createVAOVBOEBO(GLuint& VAO, GLuint& VBO, GLuint& EBO,
 /// @param bodies Bodies to be simulated
 /// @param dt Time 
 void applyPhysics(std::vector<Body>& bodies, float dt);
+
+/// @brief Applies light to bodies
+/// @param shaderProgram Shader program
+/// @param bodies physics bodies
+/// @param maxLights max light sources (default 10)
+void applyLight(GLint shaderProgram, std::vector<Body>& bodies, int maxLights = 10);
 
 
 #endif //PHYSICS_H
